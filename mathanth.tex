@@ -1,0 +1,281 @@
+\documentclass{article}
+\usepackage{graphicx} % required for inserting images
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % math
+\usepackage[unicode, pdftex]{hyperref} % hyperlinks
+\usepackage{amsfonts} % NZQRC
+
+%  Русский язык
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+
+\begin{document}
+
+\section{Топология}
+\subsection{Предел последовательности точек в n–мерном евклидовом пространстве}
+
+\subsection{Теорема Больцано–Вейерштрасса и критерий Коши сходимости последовательности}
+\subsection{Внутренние, предельные, изолированные точки множества}
+идея: любая окрестность принадлежит А \\
+$x \in X$ - внутренняя точка множества $A \subset X$ $\Leftrightarrow$
+\begin{equation*}
+    \exists \epsilon > 0: U_\epsilon (x) \subset A
+\end{equation*}
+идея: посл из А стрем к х \\
+$x \in X$ - предельная точка множества $A$ относительно X $\Leftrightarrow$
+\begin{equation*}
+    \exists \{ x_k \} \subset A: \underset{n \rightarrow \infty}{lim} x_k = x, \; x_n \neq x \; \forall n \in \mathbb N
+\end{equation*}
+идея: любая прокол окр точки из А пустая относительно А \\
+$x \in X$ - изолированная точка множества $A  \in X$ $\Leftrightarrow$
+\begin{equation*}
+    x \in A \; and \; \exists \delta > 0 : \overset{o}{U}_\delta (x) \cap A = \emptyset
+\end{equation*}
+\subsection{Открытые и замкнутые множества, их свойства}
+идея: внутренние точки \\
+Открытое множество  $\Leftrightarrow$
+\begin{equation*}
+    int A = A
+\end{equation*}
+идея: точки прикосновения \\
+Замкнутое множество $\Leftrightarrow$
+\begin{equation*}
+    \overline A = A
+\end{equation*}
+Задача 4. $A$ -- открыто  $\Leftrightarrow$ $R^n \setminus A$ -- замкнуто. \\
+Задача 1. a. $A_i$ -- открыто $\forall i \in \overline{1, n}, \; n \in \mathbb N $ $\Rightarrow$
+\begin{equation*}
+    int \cap A = \cap A
+\end{equation*}
+b. $A_i$ -- открыто $\forall i \in \mathbb N $ $\Rightarrow$
+\begin{equation*}
+    int \cup A = \cup A
+\end{equation*}
+Наоборот с замкнутыми множествами по формуле из задачи 4.
+\subsection{Внутренность, замыкание и граница множества}
+идея: любая окрестность принадлежит А \\
+Внутренность $\Leftrightarrow$
+\begin{equation*}
+    int A = \{ x \in X: \exists \epsilon > 0: U_{\epsilon} (x) \subset A \}
+\end{equation*}
+идея: любая окрестность непустая относительно А \\
+Замыкание $\Leftrightarrow$
+\begin{equation*}
+    \overline{A} = \{ x \in X: \forall \epsilon>0 \hookrightarrow A \cap U_\epsilon (x) = \emptyset \}
+\end{equation*}
+идея: замыкание без внутренности \\
+Граница $\Leftrightarrow$
+\begin{equation*}
+    \partial A = \overline{A} \setminus int A
+\end{equation*}
+\subsection{Компакты}
+идея: к любому числу из любой посл можно выбрать подпосл к этому числу \\
+Метрическое пространство X компактно $\Leftrightarrow$
+\begin{equation*}
+    \forall \{ x_k \} \subset X \; and \; \forall x \in X \; \exists \{ x_{k_n} \}: \{ x_{k_n} \} \rightarrow x
+\end{equation*}
+идея: \\
+Теорема 2. А -- компакт в метрическом пространстве Х $\Rightarrow$ A ограничено и замкнуто на Х. Обратное неверно.
+
+
+\section{Формула Тейлора}
+\subsection{Частные производные высших порядков}
+\begin{equation*}
+    \frac{\partial^2 f}{\partial x^j \partial x^i}(x_0) \Leftrightarrow
+\end{equation*}
+\begin{equation*}
+    \exists U_\delta (x_0) \subset X_{\frac{\partial}{\partial x^i} f(x)} \; and \; \frac{\partial^2 f}{\partial x^j \partial x^i}(x_0) = \frac{\partial}{\partial x^j} \frac{\partial}{\partial x^i} f(x_0)
+\end{equation*}
+\subsection{Независимость смешанной частной производной от порядка дифференцирования}
+идея:  \\
+\begin{equation*}
+    w(t) = f(x_0+t, y_0+t) + f(x_0, y_0) - f(x_0+t, y_0) - f(x_0, y_0+t)
+\end{equation*}
+\begin{equation*}
+    \phi (x, t) = f(x, y_0 + t) - f(x, y_0)
+\end{equation*}
+\begin{equation*}
+    \psi(y) = \frac{\partial f}{\partial x} (x_0+\theta_1t, y)
+\end{equation*}
+Теорема 1:
+\begin{equation*}
+    \exists U_{\delta 1} (x_0, y_0) \subset X_{\frac{\partial}{\partial x \partial y} f(x,y)} \; and \; \exists U_{\delta 2} (x_0, y_0) \subset X_{\frac{\partial}{\partial y \partial x} f(x_0, y_0)} \; and \underset{x,y \rightarrow x_0,y_0}{lim} \frac{\partial}{\partial x \partial y} f(x,y) = \frac{\partial}{\partial x \partial y} f(x_0, y_0) \;
+\end{equation*}
+\begin{equation*}
+    and \; \underset{x \rightarrow x_0}{lim} \frac{\partial}{\partial y \partial x} f(x, y) = \frac{\partial}{\partial y \partial x} f(x_0, y_0) \Rightarrow
+\end{equation*}
+\begin{equation*}
+    \frac{\partial}{\partial y \partial x} f(x_0, y_0) = \frac{\partial}{\partial x \partial y} f(x_0, y_0)
+\end{equation*}
+\subsection{Дифференциалы высших порядков, отсутствие инвариантности их формы относительно замены переменных}
+Все ч.пр. до $(k-1)$ включительно опр. в окр. и дифф. в т.$x_0$ \\
+идея: индукция \\
+Дифф. $k$ п. опр. по инд.:
+\begin{equation*}
+    d^k f(x_0) dx = d(d^{k-1} f(x) dx) \bigg |_{x=x_0} dx
+\end{equation*}
+идея: индукция \\
+Лемма 1. Ф-ия $f$ $k$  раз дифф. в т.$x_0$ $\Rightarrow$
+\begin{equation*}
+    d^k f(x_0) dx = \sum_{i1=1}^n ... \sum_{ik=1}^n \frac{\partial ^k f(x_0)}{\partial x^{ik} ... \partial x^{i1}} dx^{ik} ... dx^{i1}
+\end{equation*}
+\subsection{Формула Тейлора для функций нескольких переменных с остаточным членом в форме Лагранжа и Пеано}
+идея: фикс.$x$ и расс.: \\
+\begin{equation*}
+    \phi (t) = f(x_0+ \Delta x t)
+\end{equation*}
+теорема о сложной функции + формула Тейлора Лагранжа для одной переменной \\
+Теорема 1. Ф-ия $f$ $(m+1)$ раз дифф. в окр.$x_0$. Тогда
+\begin{equation*}
+    \forall x \in U_\delta(x_0) \hookrightarrow
+\end{equation*}
+\begin{equation*}
+    f(x) = f(x_0) + \sum_{k=1}^{m} \frac{d^k f(x_0)}{k!} \Delta x + \frac{d^{m+1} f(x_0+ \theta \Delta x)}{(m+1)!} \Delta x
+\end{equation*}
+\begin{equation*}
+    \Delta x = x - x_0, \; \theta \in (0, 1)
+\end{equation*}
+
+
+\section{Теория меры}
+
+\subsection{Определение измеримости по Лебегу множества в n–мерном евклидовом пространстве}
+Мн-во $X \subset \mathbb R^n$ изм. по Лебегу $\Leftrightarrow$ явл. объед. сч.числа кон.изм.мн-в \\
+Мн-во $X \subset \mathbb R^n$ кон.изм. $\Leftrightarrow$
+\begin{equation*}
+    \exists \{ X_k \}: \; X_k \; - \; cell \; set \; and \; X_k \overset{\mu}{\rightarrow} X
+\end{equation*}
+\subsection{Критерий измеримости}
+\subsection{Измеримость объединения, пересечения и разности измеримых множеств}
+идея: последовательности, для клеточных, переход к пределу \\
+Лемма 3. Пусть мн-ва $X,Y \subset \mathbb R^n$ кон.изм. Тогда
+\begin{equation*}
+    X \cup Y, X \cap Y, X \setminus Y
+\end{equation*}
+кон.изм и
+\begin{equation*}
+    \mu (X \cup Y) + \mu (X \cap Y) = \mu (X) + \mu (Y)
+\end{equation*}
+\subsection{Счетная аддитивность меры Лебега}
+идея: полуадд. - по опр., шаг 1 для кон.изм.\\
+по лемме пред. каждое как дизъ. об., для которых уже док. \\
+Пусть мн-во $X \subset \mathbb R^n$
+\begin{equation*}
+    X = \bigsqcup_{k=1}^{\infty} X_k, \; X_k - \; measurable \; set
+\end{equation*}
+Тогда Х изм. и
+\begin{equation*}
+    \mu (X) = \sum_{k=1}^\infty \mu ( X_k )
+\end{equation*}
+\subsection{Измеримость и мера цилиндра в (n+1) – мерном пространстве}
+
+
+\section{Интеграл}
+\subsection{Определенный интеграл Римана}
+\subsection{Верхние и нижние суммы Дарбу, их свойства}
+\subsection{Критерий интегрируемости}
+\subsection{Интегрируемость непрерывной функции, монотонной функции, ограниченной функции с конечным числом точек разрыва}
+\subsection{Аддитивность интеграла по отрезкам, линейность интеграла, интегрируемость произведения функций, интегрируемость модуля интегрируемой функции, интегрирование неравенств, теорема о среднем.}
+\subsection{Свойства интеграла с переменным верхним пределом — непрерывность, дифференцируемость}
+\subsection{Формула Ньютона–Лейбница}
+\subsection{Замена переменной и интегрирование по частям в определенном интеграле}
+
+
+\section{Геометрические приложения интеграла}
+\subsection{Геометрические приложения определенного интеграла — площадь криволинейной трапеции, объем тела вращения, длина кривой}
+идея: разбить на супремум и инфимум прямоугольники, их суммы равны в.сумме Д. и н.сумме Д. \\
+Теорема 1. Пусть $f:[a,b] \rightarrow \mathbb R$ инт. и неотр. на $[a,b]$ \\
+Тогда кр.тр. 
+\begin{equation*}
+    E = \{ (x,y): a \leq x \leq b, \; 0 \leq y \leq f(x) \}
+\end{equation*}
+явл. изм. мн. и
+\begin{equation*}
+    \mu (E) = \int_a^b f(x) dx
+\end{equation*}
+идея: разбить на супремум и инфимум цилиндры, их суммы равны в.сумме Д. и н.сумме Д. \\
+Теорема 2. Пусть $f:[a,b]\rightarrow\mathbb R$ инт. и неотр. на $[a,b]$ \\
+Тогда тело вр.
+\begin{equation*}
+    G = \{ (x,y,z) \in \mathbb R^3: x \in [a,b], \sqrt{y^2+z^2} \leq f(x) \}
+\end{equation*}
+изм. и равно
+\begin{equation*}
+    \mu(G) = \pi \int_a^b f^2(x) dx
+\end{equation*}
+идея: $s' = |\overline{r}'|$ \\
+Теорема 3. Если кр. $L = \{ \overline{r}(t): t \in [a,b] \}$ непр. дифф., то
+\begin{equation*}
+    |L| = \int_a^b |\frac{d\overline{r}}{dt}| dt
+\end{equation*}
+\subsection{Вычисление площади поверхности вращения (без
+доказательства)}
+Теорема 2. Пусть $f(x): [a,b] \rightarrow \mathbb R$ -- неотр., непр.дифф. \\
+Тогда пл.пов.вр. сущ. и равна
+\begin{equation*}
+    S = 2\pi \int_a^b f(x) \sqrt{1+(\frac{df}{dx})^2}dx
+\end{equation*}
+
+
+\section{Криволинейный интеграл I и II рода}
+\subsection{Криволинейный интеграл первого рода}
+Определение. Пусть кр. $L = \{ \overline{r}, \; t \in [a,b] \} \subset \mathbb R^n$ зад. непр.в-р-ф-ей $\overline{r}$, пр. кот. кус.непр. на отр. $[a,b]$. Пусть на мн-ве $L$ зад. непр.скал.ф-я $f(\overline{r}(t))$ \\
+Крив.инт. 1 рода ф-ии $f$ по кр. $L$ наз. \\
+\begin{equation*}
+    \underset{L}{\int} fds = \int_a^b f(\overline{r}(t))|r'(t)|dt
+\end{equation*}
+идея: два аргумента, функция из аргумента 1 в аргумент 2 (непр., возр., непр.дифф.), теорема о производной сл.ф-ии \\
+Теорема 1. Крив. инт. 1 рода не зав. от параметризации. \\
+идея: замена $a \rightarrow -b, \; b \rightarrow -a, \; t \rightarrow -t$ \\
+Лемма 1. При изм. ориент. кр.инт. 1 рода не изм.
+\subsection{Криволинейный интеграл второго рода}
+Определение. Пусть кр. $L = \{ \overline{r}, \; t \in [a,b] \} \subset \mathbb R^n$ зад. непр.в-р-ф-ей $\overline{r}$, пр. кот. кус.непр. на отр. $[a,b]$. Пусть на мн-ве $L$ зад. непр.$n$-м.в-р-ф-я $\overline{F}(\overline{r}(t))$ \\
+Крив.инт. 2 рода ф-ии $\overline F$ по кр. $L$ наз. \\
+\begin{equation*}
+    \underset{L}{\int} \overline F d \overline r = \int_a^b \overline F \overline r' dt
+\end{equation*}
+идея: ан-но крив. инт. 1 рода \\
+Теорема 2. Крив. инт. 2 рода не зав. от параметризации. \\
+идея: ан-но крив. инт. 1 рода \\
+Лемма 2. При изм. ор. кр. крив. инт. 2 рода меняет знак.
+
+
+\section{Несобственный интеграл}
+\subsection{Несобственный интеграл}
+Определение. Пусть $f:[a,\infty) \rightarrow \mathbb R \; and \; \forall b>a$ $f$ инт-ма на $[a,b]$ \\
+Тогда несоб. инт. наз.
+\begin{equation*}
+    \int_a^\infty f(x) dx = \underset{b \rightarrow \infty}{lim} \int_a^b f(x) dx
+\end{equation*}
+\subsection{Критерий Коши сходимости интеграла}
+идея: пред. к $b$ по кр.К. сущ. пред. ф-ии \\
+Теорема 1. Пусть $f$ инт-ма на $\forall[c,d] \subset [a,b)$ \\
+Тогда $\int_a^b f(x) dx$ сх. $\Leftrightarrow$
+\begin{equation*}
+    \forall \epsilon > 0 \; \exists \xi \in (a,b): \; \forall b_1,b_2 \in (\xi, b) \hookrightarrow |\int_{b1}^{b2}f(x)dx|<\epsilon
+\end{equation*}
+\subsection{Интегралы от знакопостоянных функций, признак сравнения сходимости}
+идея: супремумы отрезков меньше или равны, соотв. док. интегралы меньше/больше бесконечности по транзитивности \\
+Теорема 2. Пусть $f \; and \; g$ инт-мы на $\forall [c,d] \subset [a,b)$ и $\forall x \in [a,b) \hookrightarrow 0 \leq f(x) \leq g(x)$ \\
+Тогда \\
+а. из сх. $\int_a^b g dx$ $\hookrightarrow$ сх. $\int_a^b f dx$ \\
+б. из расх. $\int_a^b f dx$ $\hookrightarrow$ расх. $\int_a^b g dx$
+\subsection{Интегралы от знакопеременных функций, абсолютная и условная сходимость}
+Определение. $\int_a^b f(x) dx$ сх. абс. $\Leftrightarrow$ $\int_a^b |f(x)| dx$ сх. \\
+Определение.  $\int_a^b f(x) dx$ не сх.абс., но сх. $\Leftrightarrow$ $\int_a^b f(x) dx$ сх.усл. \\
+идея: кр.К. сх. инт., нер-во с модулем \\
+Теорема 2. Пусть $f$ инт-ма на $\forall [c,d] \subset [a,b)$ \\
+$\int_a^b f(x) dx$ сх.абс. $\Rightarrow$ $\int_a^b f(x) dx$ сх.
+\subsection{Признаки Дирихле и Абеля сходимости интегралов}
+идея: по частям, $F(x)$ огр., по пр.ср., $g(x) \rightarrow 0$, не влияет \\
+Теорема 3. Пусть $f(x)$ непр., а $g(x)$ непр.дифф на $[a,b), \; b \in \overline{\mathbb R}$ \\
+Пусть \\
+1. $F(x)$ огр. на $[a,b)$ \\
+2. $\underset{x \rightarrow b-0}{lim} g(x) = 0$ \\
+3. $\forall x \in [a,b) \; g'(x) \leq 0$
+Тогда \\
+\begin{equation*}
+    \int_a^b f(x) \cdot g(x) dx
+\end{equation*}
+сх. \\
+\end{document}
