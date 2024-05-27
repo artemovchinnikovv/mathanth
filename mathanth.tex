@@ -278,4 +278,75 @@ $\int_a^b f(x) dx$ сх.абс. $\Rightarrow$ $\int_a^b f(x) dx$ сх.
     \int_a^b f(x) \cdot g(x) dx
 \end{equation*}
 сх. \\
+
+\section{Числовые ряды}
+\subsection{Числовые ряды}
+Определение. Пусть $\{ a_k \}_{k=1}^{\infty}$ -- числ. посл. \\
+Сумма ряда
+\begin{equation*}
+    \sum^\infty a_k = \underset{n \rightarrow \infty}{lim} \sum^n a_k
+\end{equation*}
+Ряд наз. сх., если $\overset{\infty}{\sum} a_k \in \mathbb R$, в пр. сл. расх.
+\subsection{Критерий Коши сходимости ряда}
+идея: кр.К. для посл. \\
+Теорема 1.
+\begin{equation*}
+    \overset{\infty}{\sum} a_k \in \mathbb R \Leftrightarrow
+\end{equation*}
+\begin{equation*}
+    \forall \epsilon > 0 \; \exists N \in \mathbb N: \; \forall n \geq N \; \forall p \in \mathbb N \hookrightarrow |\sum_{n+1}^{n+p} a_k| < \epsilon
+\end{equation*}
+\subsection{Знакопостоянные ряды: признак сравнения сходимости, признаки Даламбера и Коши, интегральный признак}
+идея: по т1 расс. супремумы и исп. транз. \\
+Теорема 2.
+\begin{equation*}
+    0 \leq a_k \leq b_k \; \forall k \in \mathbb N \; \Rightarrow
+\end{equation*}
+а. из сх. $\overset{\infty}{\sum} b_k$ $\hookrightarrow$ сх. $\overset{\infty}{\sum} a_k$ \\
+б. из расх. $\overset{\infty}{\sum} a_k$ $\hookrightarrow$ расх. $\overset{\infty}{\sum} b_k$ \\
+идея: ср-ть с геом. прог. \\
+Теорема 5.
+\begin{equation*}
+    a_k>0 \; \forall k \in \mathbb N
+\end{equation*}
+Тогда
+\begin{equation*}
+    a. \; if \; \exists k_0 \in \mathbb N \; and \; q \in (0,1): \frac{a_{k+1}}{a_k} \leq q \; \forall k \geq k_0 \; then \; \overset{\infty}{\sum} a_k \; conv.
+\end{equation*}
+\begin{equation*}
+    b. \; if \; \exists k_0 \in \mathbb N: \frac{a_{k+1}}{a_k} \geq 1 \; \forall k \geq k_0 \; then \; \overset{\infty}{\sum} a_k \; disconv.
+\end{equation*}
+идея: возвести в ст., ср-ть с геом. прог. \\
+Теорема 6.
+\begin{equation*}
+    a_k>0 \; \forall k \in \mathbb N
+\end{equation*}
+\begin{equation*}
+    a. \; if \; \exists k_0 \in \mathbb N \; and \; q \in (0,1): \sqrt[k]{a_k} \leq q \; \forall k \geq k_0 \; then \; \overset{\infty}{\sum} a_k \; conv.
+\end{equation*}
+\begin{equation*}
+    b. \; if \; \exists k_0 \in \mathbb N: \sqrt[k]{a_k} \geq 1 \; \forall k \geq k_0 \; then \; \overset{\infty}{\sum} a_k \; disconv.
+\end{equation*}
+идея: проинт. и просумм. $f(k+1) \leq f(x) \leq f(k)$, супр. \\
+Теорема 4. $f(x)$ зад. и мон. на $[1, \infty)$ \\
+Тогда $\overset{\infty}{\sum} f(k)$ и $\int_1^\infty f(x)dx$ сх. или расх. одн-но \\
+\subsection{Знакопеременные ряды, абсолютная и условная сходимость, признаки Лейбница, Дирихле и Абеля}
+Определение. $\overset{\infty}{\sum} a_k$ наз. абс. сх., если сх. $\overset{\infty}{\sum} |a_k|$ \\
+$\overset{\infty}{\sum} a_k$ наз. усл. сх., если $\overset{\infty}{\sum} a_k$ сх., а $\overset{\infty}{\sum} |a_k|$ расх. \\
+идея: кр.К. для рядов \\
+Теорема 2. Ряд сх. абс. $\Rightarrow$ сх. \\
+идея: пр-ие Абеля $A_n = \overset{n}{\sum} a_k, \; A_0 = 0 $ \\
+Теорема 3.
+\begin{equation*}
+    \exists C \in \mathbb R: \forall n \in \mathbb N \hookrightarrow |\overset{n}{\sum} a_k| \leq C \; and \; b_k \overset{mon}{\rightarrow} 0 \; as \; k \rightarrow \infty
+\end{equation*}
+Тогда $\overset{\infty}{\sum} a_k b_k$ сх.
+\subsection{Независимость суммы абсолютно сходящегося ряда от порядка слагаемых}
+\subsection{Теорема Римана о перестановках
+членов условно сходящегося ряда (без доказательства)}
+идея: когда б., добирать отр., когда м., добирать пол. (разд. ряд на пол. и отр.) \\
+Теорема 2. $\overset{\infty}{\sum} a_k$ сх. усл., то $\forall x \in \mathbb R$ можно пер. чл. $\overset{\infty}{\sum} a_k$ так: $\overset{\infty}{\sum} a_{kj} = x$
+\subsection{Произведение абсолютно сходящихся рядов}
+
+
 \end{document}
