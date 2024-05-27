@@ -172,12 +172,78 @@ b. $A_i$ -- открыто $\forall i \in \mathbb N $ $\Rightarrow$
 
 \section{Интеграл}
 \subsection{Определенный интеграл Римана}
+Опр.
+\begin{equation*}
+    J = \int_a^b f(x) dx \Leftrightarrow
+\end{equation*}
+\begin{equation*}
+    \underset{l(T) \rightarrow 0}{lim} s = \underset{l(T) \rightarrow 0}{lim} S = J \Leftrightarrow
+\end{equation*}
+\begin{equation*}
+    \forall \epsilon >0 \; \exists \delta > 0: \; \forall T: \; l(T)<\delta \hookrightarrow |s-J|<\epsilon \; and \; |S-J|<\epsilon
+\end{equation*}
 \subsection{Верхние и нижние суммы Дарбу, их свойства}
+Опр. Пусть $f:[a,b] \rightarrow \mathbb R$ и зад. $T = \{ x_i \}_{i=0}^I$ отр. $[a,b]$ \\
+Пусть $ m_i = \underset{x \in [x_{i-1}, x_i]}{inf} f(x) $, $ M_i = \underset{x \in [x_{i-1}, x_i]}{sup} f(x) $ \\
+Тогда
+\begin{equation*}
+    s = \sum^I (x_i - x_{i-1})m_i
+\end{equation*}
+\begin{equation*}
+    S = \sum^I (x_i - x_{i-1})M_i
+\end{equation*}
+наз. соотв. н.суммой Д. и в.суммой Д.
 \subsection{Критерий интегрируемости}
+идея: из опр. инт. берем $\frac{\epsilon}{2}$ \\
+Теорема 1. $f:[a,b]\rightarrow\mathbb R$ инт. на $[a,b]$ $\Leftrightarrow$
+\begin{equation*}
+    \underset{l(T) \rightarrow 0}{lim} \Delta = 0 \Leftrightarrow
+\end{equation*}
+\begin{equation*}
+    \forall \epsilon > 0 \; \exists \delta > 0: \; \forall T: \; l(T) \leq \delta \hookrightarrow \Delta \leq \epsilon
+\end{equation*}
 \subsection{Интегрируемость непрерывной функции, монотонной функции, ограниченной функции с конечным числом точек разрыва}
+идея: т.К., модуль непр. стр. к нулю, огр. двумя \\
+Теорема 1. $f(x)$ непр. на $[a,b]$ $\Rightarrow$ инт-ма на нем \\
+\\
+идея: рассм. один отр., по т.4 ф-я совп. за искл. кон. числа т. \\
+Теорема 2. $f(x)$ кус. непр. на $[a,b]$ $\Rightarrow$ инт-ма на нем \\
+\\
+идея: кр.инт., $w_i = \underset{x \in [x_{i-1}, x_i]}{sup} |f(x'-x'')| = f(x_{i-1}) - f(x_{i}) $ \\
+Теорема 3. $f(x)$ мон. на $[a,b]$ $\Rightarrow$ инт-ма на нем \\
 \subsection{Аддитивность интеграла по отрезкам, линейность интеграла, интегрируемость произведения функций, интегрируемость модуля интегрируемой функции, интегрирование неравенств, теорема о среднем.}
+идея: огр. на $[a,c]$,  $|S(T)-S(T_1)-S(T_2)| \leq 2M \cdot l(T) \rightarrow 0$ \\
+Теорема 5. $f(x)$ инт-ма на $[a,b]$ и $[b,c]$ \\
+Тогда $f(x)$ инт-ма на $[a,c]$ и
+\begin{equation*}
+    \int_a^c f(x) dx = \int_a^b f(x) dx + \int_b^c f(x) dx
+\end{equation*}
+\\
+идея: лин. инт. суммы Р. \\
+Теорема 1. $f(x), \; g(x)$ инт-мы на $[a,b]$ \\
+То $\phi (x) = \alpha f(x) + \beta g(x) $ инт-ма на $[a,b] \; \forall \alpha, \; \beta \in \mathbb R$ и
+\begin{equation*}
+    \int_a^b (\alpha f(x) + \beta g(x)) dx = \alpha \int_a^b f(x) dx + \beta \int_a^b g(x) dx
+\end{equation*}
+\\
+идея: $\sigma (f) \leq \sigma (g)$ пер. к пред. $J_f \leq J_g$ \\
+Теорема 2. $f(x), \; g(x)$ инт-мы на $[a,b]$ и $\forall x \in [a,b]$ $\hookrightarrow$ $f(x) \leq g(x)$ $\Rightarrow$
+\begin{equation*}
+    \int_a^b f(x) dx \leq \int_a^b g(x) dx
+\end{equation*}
+\\
+идея: \\
+Теорема 3. $f(x)$ инт-ма на $[a,b]$ $\Rightarrow$ $|f(x)|$ инт-ма на $[a,b]$ и
+\begin{equation*}
+    |\int_a^b f(x) dx| \leq \int_a^b |f(x)| dx
+\end{equation*}
 \subsection{Свойства интеграла с переменным верхним пределом — непрерывность, дифференцируемость}
 \subsection{Формула Ньютона–Лейбница}
+идея: $F(a) = C, \; F(b) = \int_a^b f(x) dx + C \rightarrow F(b)-F(a) = \int_a^b f(x) dx $ \\
+Следствие 2. $F(x)$ перв. $f(x)$ на $[a,b]$, $f(x)$ непр. $\Rightarrow$
+\begin{equation*}
+    \int_a^b f(x) dx = F(b) - F(a)
+\end{equation*}
 \subsection{Замена переменной и интегрирование по частям в определенном интеграле}
 
 
