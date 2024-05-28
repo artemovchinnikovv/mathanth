@@ -159,34 +159,24 @@ b. $A_i$ -- открыто $\forall i \in \mathbb N $ $\Rightarrow$
 
 
 \newpage
+мерном пространстве
 \section{Теория меры}
-\subsection{Определение измеримости по Лебегу множества в n–мерном евклидовом пространстве}
-Мн-во $X \subset \mathbb R^n$ изм. по Лебегу $\Leftrightarrow$ явл. объед. сч.числа кон.изм.мн-в \\
-Мн-во $X \subset \mathbb R^n$ кон.изм. $\Leftrightarrow$
+\subsection{Определение измеримости по Жордану множества в n–мерном евклидовом пространстве}
+Мн. $E \subset \mathbb R^n$ наз. изм. по Ж. $\Leftrightarrow$
 \begin{equation*}
-    \exists \{ X_k \}: \; X_k \; - \; cell \; set \; and \; X_k \overset{\mu}{\rightarrow} X
+    \mu_*(E) = \mu^*(E) \in \mathbb R
 \end{equation*}
 \subsection{Критерий измеримости}
-\subsection{Измеримость объединения, пересечения и разности измеримых множеств}
-идея: последовательности, для клеточных, переход к пределу \\
-Лемма 3. Пусть мн-ва $X,Y \subset \mathbb R^n$ кон.изм. Тогда
+идея: огр. $\epsilon$ мн-ми \\
+Теорема 1. Мн. $E \subset \mathbb R^n$ изм. $\Leftrightarrow$ \\
+огр. и $\mu (\partial E)=0$
+\subsection{Измеримость объединения, пересечения и разности измеримых
+множеств}
+\subsection{Конечная аддитивность меры Жордана}
+идея: огр. $\epsilon$ мн-ми \\
+Мн. $E_1 \; and \; E_2$ изм. по Ж. и $int (E_1) \cap int (E_2) = 0$ $\Rightarrow$
 \begin{equation*}
-    X \cup Y, X \cap Y, X \setminus Y
-\end{equation*}
-кон.изм и
-\begin{equation*}
-    \mu (X \cup Y) + \mu (X \cap Y) = \mu (X) + \mu (Y)
-\end{equation*}
-\subsection{Счетная аддитивность меры Лебега}
-идея: полуадд. - по опр., шаг 1 для кон.изм.\\
-по лемме пред. каждое как дизъ. об., для которых уже док. \\
-Пусть мн-во $X \subset \mathbb R^n$
-\begin{equation*}
-    X = \bigsqcup_{k=1}^{\infty} X_k, \; X_k - \; measurable \; set
-\end{equation*}
-Тогда Х изм. и
-\begin{equation*}
-    \mu (X) = \sum_{k=1}^\infty \mu ( X_k )
+    \mu (E_1 \cup E_2) = \mu (E_1) + \mu (E_2)
 \end{equation*}
 \subsection{Измеримость и мера цилиндра в (n+1) – мерном пространстве}
 
