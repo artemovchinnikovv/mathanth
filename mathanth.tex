@@ -260,6 +260,17 @@ b. $A_i$ -- открыто $\forall i \in \mathbb N $ $\Rightarrow$
     |\int_a^b f(x) dx| \leq \int_a^b |f(x)| dx
 \end{equation*}
 \subsection{Свойства интеграла с переменным верхним пределом — непрерывность, дифференцируемость}
+идея:  \\
+Теорема 1. $f: [a,b] \rightarrow \mathbb R$ инт. на $[a,b]$ $\Rightarrow$ \\
+\begin{equation*}
+    F(x) = \int_a^x f(t) dt \; cont. \; on \; [a,b]
+\end{equation*}
+\\
+идея:  \\
+Теорема 2. $f: [a,b] \rightarrow \mathbb R$ непр. на $[a,b]$ $\Rightarrow$
+\begin{equation*}
+    F(x) = \int_a^x f(t) dt \; is \; antider. \; f(x) \; on \; [a,b]
+\end{equation*}
 \subsection{Формула Ньютона–Лейбница}
 идея: $F(a) = C, \; F(b) = \int_a^b f(x) dx + C \rightarrow F(b)-F(a) = \int_a^b f(x) dx $ \\
 Следствие 2. $F(x)$ перв. $f(x)$ на $[a,b]$, $f(x)$ непр. $\Rightarrow$
@@ -435,11 +446,23 @@ $\overset{\infty}{\sum} a_k$ наз. усл. сх., если $\overset{\infty}{\
 \end{equation*}
 Тогда $\overset{\infty}{\sum} a_k b_k$ сх.
 \subsection{Независимость суммы абсолютно сходящегося ряда от порядка слагаемых}
+идея: исп. $M_n$ док. абс. сх., исп. $M_n$, $m_n$ и $\sigma_m$ док. рав. \\
+Теорема 1. Р. $\sum^\infty a_{kj}$ пол. пер. абс. сх. р. $\sum^\infty a_{k}$ $\Rightarrow$ \\
+$\sum^\infty a_{kj}$ абс. сх. и
+\begin{equation*}
+    \sum^\infty a_{kj} = \sum^\infty a_{k}
+\end{equation*}
 \subsection{Теорема Римана о перестановках
 членов условно сходящегося ряда (без доказательства)}
 идея: когда б., добирать отр., когда м., добирать пол. (разд. ряд на пол. и отр.) \\
 Теорема 2. $\overset{\infty}{\sum} a_k$ сх. усл., то $\forall x \in \mathbb R$ можно пер. чл. $\overset{\infty}{\sum} a_k$ так: $\overset{\infty}{\sum} a_{kj} = x$
 \subsection{Произведение абсолютно сходящихся рядов}
+идея: огр. р. пр. пр. р., док. абс. сх., пост. вз. одн. соот. по диаг., р. не изм. по док. \\
+Теорема 3. Пусть $\sum^\infty a_k$ и $\sum^\infty b_k$ абс. сх., а ${(m_j, n_j)}: \mathbb N \rightarrow \mathbb N ^2 $ вз. одн. \\
+Тогда $\sum^\infty a_{mj}b_{nj}$ абс. сх. и
+\begin{equation*}
+    \sum^\infty a_{mj}b_{nj} = \sum^\infty a_k \cdot \sum^\infty b_k
+\end{equation*}
 
 
 \newpage
