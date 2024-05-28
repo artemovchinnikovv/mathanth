@@ -435,23 +435,74 @@ $\overset{\infty}{\sum} a_k$ наз. усл. сх., если $\overset{\infty}{\
 
 \section{Функциональные последовательности и ряды}
 \subsection{Равномерная сходимость функциональных последовательностей и рядов}
+Опр. $\{ f_n (x) \}$ сх. к $f(x)$ на мн.$X$ $\Leftrightarrow$
+\begin{equation*}
+    f_n (x) \underset{X}{\rightrightarrows} f(x) \Leftrightarrow
+\end{equation*}
+\begin{equation*}
+    \forall \epsilon > 0 \; \exists N \in \mathbb N: \; \forall n \geq N \; \forall x \in X \; \hookrightarrow |f_n (x) - f(x)| \leq \epsilon
+\end{equation*}
+Для ф. р. опр. ан-ое, расс. посл. ч. сумм
 \subsection{Критерий Коши равномерной сходимости}
+идея: $\Rightarrow$ в опр. вз. $\epsilon/2$, $\Leftarrow$ в опр. вз. $p \rightarrow \infty$ \\
+Теорема 2.
+\begin{equation*}
+    f_n (x) \underset{X}{\rightrightarrows} f(x) \Leftrightarrow
+\end{equation*}
+\begin{equation*}
+    \forall \epsilon>0 \; \exists N \in \mathbb N: \; \forall n \geq N \; \forall p \in \mathbb N \; x \in X \hookrightarrow |f_n (x)-f_{n+p}(x)| \leq \epsilon
+\end{equation*}
+Для ф. р. опр. ан-ое, расс. посл. ч. сумм
 \subsection{Непрерывность суммы равномерно сходящегося ряда из непрерывных функций}
+идея: $|f_N(x) - f(x)| \leq \epsilon/4$, $|f_N(x)-f(x_0)| \leq \epsilon/2$ $\Rightarrow$ $|f(x)-f(x_0)| \leq \epsilon$ \\
+Теорема 1. $f_n(x)$ непр. на $X$ и
+\begin{equation*}
+    f_n (x) \underset{X}{\rightrightarrows} f(x)
+\end{equation*}
+То $f(x)$ непр. на $X$
 \subsection{Почленное интегрирование и дифференцирование функциональных последовательностей и рядов}
 \subsection{Признаки Вейерштрасса, Дирихле и Абеля равномерной сходимости функциональных рядов}
 
 
 \section{Степенные ряды}
 \subsection{Степенные ряды с комплексными членами}
+Опр. $\{ c_k \}$, $c_k, w_0 \in \mathbb C$
+\begin{equation*}
+    \sum_{k=0}^\infty c_k (w-w_0)^k
+\end{equation*}
+наз. ст. р.
 \subsection{Первая теорема Абеля}
+идея: по св-ву рад. сх. \\
+Теорема 2. $\sum_{k=0}^\infty c_k z^k$ сх. в т.$z_0$ \\
+Тогда
+\begin{equation*}
+    \forall z \in \mathbb C: |z| < |z_0|
+\end{equation*}
+исх. р. сх. абс.
 \subsection{Круг и радиус сходимости}
+Опр. Рад. сх. ст. р. $\sum_{k=0}^\infty c_k z^k$ наз.
+\begin{equation*}
+    R \in [0, \infty]: \; \frac{1}{R} = \underset{k \rightarrow \infty}{\overline{\lim}} \sqrt[k]{|c_k|}
+\end{equation*}
+Кр. с ц. в т.$(0,0)$ и рад. $R$ наз. кр. сх. ст. р. $\sum_{k=0}^\infty c_k z^k$
 \subsection{Характер сходимости степенного ряда в круге сходимости}
+идея: ср. $|c_k z^k| \leq |c_k| r^k$, сх. по св-ву рад., по пр.В.\\
+Теорема 3. $R>0$ ст. р. $\sum_{k=0}^\infty c_k z^k$ $\Rightarrow$
+\begin{equation*}
+    \forall r \in (0, R) \; series \; \sum_{k=0}^\infty c_k z^k \; converges \; uniform \; in \; Z = \{ z \in \mathbb C: |z| \leq r \}
+\end{equation*}
 \subsection{Непрерывность суммы степенного ряда в круге сходимости}
 \subsection{Формула Коши–Адамара}
+\begin{equation*}
+    \frac{1}{R} = \underset{k \rightarrow \infty}{\overline{\lim}} \sqrt[k]{|c_k|}
+\end{equation*}
 \subsection{Сохранение радиуса сходимости степенного ряда при формальном дифференцировании и интегрировании ряда}
+идея: ф.К.А., из дифф. след. инт. \\
+Теорема 5. Рад. ст. р. $\sum_{k=0}^\infty c_k k z^{k-1}$ и $\sum_{k=0}^\infty \frac{c_k}{k+1} z^{k+1}$ совп. с рад. $\sum_{k=0}^\infty c_k z^k$
 \subsection{Вторая теорема Абеля}
-
-
+идея: пр.А. \\
+Теорема 4. Пусть $\sum_{k=0}^\infty c_k z^k$ сх. в $z_1 \in \mathbb C$ \\
+Тогда $\sum_{k=0}^\infty c_k z^k$ сх. равн. на $[0, z_1] = \{ tz_1: t \in [0,1] \}$
 \section{Ряд Тейлора}
 \subsection{Степенные ряды с действительными членами}
 \subsection{Бесконечная дифференцируемость суммы степенного ряда на интервале сходимости}
@@ -491,6 +542,9 @@ $f$ рег. в т.$x_0$ и
     e^x = \sum_{k=0}^\infty \frac{x^k}{k!}
 \end{equation*}
 \subsection{Разложение в степенной ряд комплекснозначной экспоненты}
-
-
+идея: док. $\exp (z_1) \cdot \exp (z_2) = \exp (z_1+z_2)$ через произ. р. и б.Н. $k_1 = k$, $k_2 = m-k$ \\
+Теорема 2.
+\begin{equation*}
+    \forall z \in \mathbb C \hookrightarrow \exp(z) = \sum_{k=0}^\infty \frac{z^k}{k!}
+\end{equation*}
 \end{document}
